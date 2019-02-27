@@ -23,11 +23,12 @@ class Dogdata extends React.Component {
 
 
     componentDidMount() {
-        petfinder.pet.find({ find: "full", animal: 'dog', location: "77026" })
+        petfinder.pet.find({ find: "full", animal: 'dog', location: "77026", count: 50})
             .then(data => {
                 // console.log(data.petfinder.pets.pet)
                 this.setState({
                     dogs: data.petfinder.pets.pet,
+                    
                 });
             })
     }
@@ -59,9 +60,9 @@ class Dogdata extends React.Component {
                         <h4 className='dogsubheader'>{d.breeds.breed[0]}</h4>
                         <h4 className='dogsubheader'>{d.contact.city}, {d.contact.state}</h4>
                         <img className='dogphoto' src={d.media.photos.photo[2].value} alt='adopt this dog'></img>
-                        <Button className= 'button' variant="contained" color="secondary" >Primary</Button>
+                        <Button className= 'button' variant="contained" color="secondary" >Mismatch</Button>
                         <span> &nbsp; &nbsp;</span>
-                        <Button className= 'button'  variant="contained" color="primary" >Primary</Button>
+                        <Button className= 'button'  variant="contained" color="primary" > Match </Button>
                     </div>
                 </Card>
             );
