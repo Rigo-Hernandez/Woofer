@@ -17,13 +17,20 @@ class Dogdata extends React.Component {
         super(props);
         this.state = {
             loading: true,
-            dogs: []
+            dogs: [],
         }
     }
 
+    handleChange(e) {
+        this.setState({
+            username: e.target.value
+        });
+    }
+
+
 
     componentDidMount() {
-        petfinder.pet.find({ find: "full", animal: 'dog', location: "77026", count: 50})
+        petfinder.pet.find({ find: "full", animal: 'dog', location: '77009', count: 50})
             .then(data => {
                 // console.log(data.petfinder.pets.pet)
                 this.setState({
@@ -31,18 +38,17 @@ class Dogdata extends React.Component {
                     
                 });
             })
+            
     }
 
     onDoubleTap() {
         let data = this.state.dogs;
-        return (
-            alert(data.name)
-        )
+        return data.map((d) => (
+            window.alert(d.description)
+            
+        ))
     }
 
-    onSwipeRight(data) {
-        console.log("I was swiped right.");
-    }
     
 
     renderCards() {
@@ -75,14 +81,15 @@ class Dogdata extends React.Component {
             <CardWrapper>
                 {this.renderCards()}
             </CardWrapper>
+            
         );
     }
 
 }
 
-const mapStateToProps = state => {
-    return { dogs: state.dogs };
-  };
+// const mapStateToProps = state => {
+//     return { dogs: state.dogs };
+//   };
 
 export default Dogdata
 

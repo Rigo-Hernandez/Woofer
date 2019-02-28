@@ -89,6 +89,7 @@ function SearchAppBar(props) {
             </div>
             <InputBase
               placeholder="Zip Code"
+              
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
