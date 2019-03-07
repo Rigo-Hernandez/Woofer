@@ -32,7 +32,7 @@ class Dogdata extends React.Component {
     componentDidMount() {
         petfinder.pet.find({ find: "full", animal: 'dog', location: '77009', count: 50})
             .then(data => {
-                // console.log(data.petfinder.pets.pet)
+                console.log(data.petfinder.pets.pet)
                 this.setState({
                     dogs: data.petfinder.pets.pet,
                     
