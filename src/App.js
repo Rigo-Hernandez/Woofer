@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Cardog from './components/Cardog';
 import { Provider } from 'react-redux';
 import { createStore , applyMiddleware } from 'redux';
-//
+//d
 const store = createStore(() => [],{},applyMiddleware())
 class App extends Component {
   render() {
