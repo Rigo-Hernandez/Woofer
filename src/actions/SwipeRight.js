@@ -8,6 +8,7 @@ export class componentName extends Component {
       </div>
     )
   }
-}
+};
+
 
 export default componentName
