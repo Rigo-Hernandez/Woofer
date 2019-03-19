@@ -45,7 +45,6 @@ class Dogdata extends React.Component {
         let data = this.state.dogs;
         return data.map((d) => (
             window.alert(d.description)
-            
         ))
     }
 
