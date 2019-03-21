@@ -48,8 +48,6 @@ class Dogdata extends React.Component {
         ))
     }
 
-    
-
     renderCards() {
         let data = this.state.dogs;
         console.log(data)
