@@ -47,6 +47,7 @@ class Dogdata extends React.Component {
             window.alert(d.description)
         ))
     }
+    
 
     renderCards() {
         let data = this.state.dogs;
