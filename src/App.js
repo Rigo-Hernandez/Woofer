@@ -5,6 +5,7 @@ import Cardog from './components/Cardog';
 import { Provider } from 'react-redux';
 import { createStore , applyMiddleware } from 'redux';
 
+
 const store = createStore(() => [],{},applyMiddleware())
 class App extends Component {
   render() {
